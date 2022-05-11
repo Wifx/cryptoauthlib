@@ -67,6 +67,7 @@ typedef enum
     ATCA_RX_TIMEOUT             = 0xEB, //!< for Microchip PHY protocol, timeout on receipt waiting for master
     ATCA_TOO_MANY_COMM_RETRIES  = 0xEC, //!< Device did not respond too many times during a transmission. Could indicate no device present.
     ATCA_SMALL_BUFFER           = 0xED, //!< Supplied buffer is too small for data required
+    ATCA_WATCHDOG_SOON          = 0xEE, //!< Watchdog is about to expire, insufficient time to execute the given command.
     ATCA_COMM_FAIL              = 0xF0, //!< Communication with device failed. Same as in hardware dependent modules.
     ATCA_TIMEOUT                = 0xF1, //!< Timed out while waiting for response. Number of bytes received is 0.
     ATCA_BAD_OPCODE             = 0xF2, //!< opcode is not supported by the device

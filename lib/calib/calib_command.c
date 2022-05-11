@@ -751,6 +751,9 @@ ATCA_STATUS isATCAError(uint8_t *data)
         case 0x11: // chip was successfully woken up
             return ATCA_WAKE_SUCCESS;
             break;
+        case 0xee:
+            return ATCA_WATCHDOG_SOON;
+            break;
         case 0xff: // bad crc found (command not properly received by device) or other comm error
             return ATCA_STATUS_CRC;
             break;
